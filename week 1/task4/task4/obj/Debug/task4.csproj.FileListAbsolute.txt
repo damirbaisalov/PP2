@@ -1,0 +1,7 @@
+C:\Users\Lenovo\Desktop\PP2\week 1\task4\task4\bin\Debug\task4.exe.config
+C:\Users\Lenovo\Desktop\PP2\week 1\task4\task4\bin\Debug\task4.exe
+C:\Users\Lenovo\Desktop\PP2\week 1\task4\task4\bin\Debug\task4.pdb
+C:\Users\Lenovo\Desktop\PP2\week 1\task4\task4\obj\Debug\task4.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\PP2\week 1\task4\task4\obj\Debug\task4.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\PP2\week 1\task4\task4\obj\Debug\task4.exe
+C:\Users\Lenovo\Desktop\PP2\week 1\task4\task4\obj\Debug\task4.pdb
