@@ -13,15 +13,15 @@ namespace task1
         static void Main(string[] args)
         {
 
-            StreamReader sr = new StreamReader("input.txt");
+            StreamReader sr = new StreamReader("input.txt"); //Reading from file
             string s = sr.ReadLine();
             
-            char[] arr = s.ToCharArray(); 
-             Array.Reverse(arr);
-            string b = new string(arr);
-            if (s == b) Console.WriteLine("YES");
+            char[] arr = s.ToCharArray(); //Creating array of char and inuputing string to char
+             Array.Reverse(arr); //Reversing the char array
+            string b = new string(arr); //Creating new array of string 
+            if (s == b) Console.WriteLine("YES"); //If reversed=original then palindrome
             else
-                Console.WriteLine("NO");
+                Console.WriteLine("NO"); 
             Console.ReadKey();
           
             

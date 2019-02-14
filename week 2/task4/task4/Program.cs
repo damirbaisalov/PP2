@@ -11,17 +11,17 @@ namespace task4
     {
         static void Main()
         {
-            StreamWriter sw = new StreamWriter(@"C:\Users\Lenovo\Desktop\path\example1.txt");
+            StreamWriter sw = new StreamWriter(@"C:\Users\Lenovo\Desktop\path\example1.txt"); //Creating .txt file 
             sw.Write(3242);
             sw.Close();
-            string path =( @"C:\Users\Lenovo\Desktop\path\example1.txt");
+            string path =( @"C:\Users\Lenovo\Desktop\path\example1.txt"); //Creating directory1
             
 
-            string path1 = (@"C:\Users\Lenovo\Desktop\path1\example1.txt");
-            File.Copy(path,path1);
-            File.Delete(path);
+            string path1 = (@"C:\Users\Lenovo\Desktop\path1\example1.txt"); //Creating directory2
+            File.Copy(path,path1); //Copying file from directory1 to directory2
+            File.Delete(path); //Deleting the original file in directory1
         
-            sw.Close();
+            sw.Close(); 
         }
     }
 }

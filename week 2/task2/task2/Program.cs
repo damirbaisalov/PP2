@@ -11,7 +11,7 @@ namespace task2
     {
         static void Main(string[] args)
         {
-            bool isPrime(int x)
+            bool isPrime(int x) //Funtion to check for Prime
             {
                 int crt = 0;
                 for (int i = 1; i <= x; i++)
@@ -21,22 +21,22 @@ namespace task2
                         crt++;
                     }
                 }
-                if (crt == 2) return true;
+                if (crt == 2) return true; // Return true if there are 2 division of number
                 return false;
             }
-            StreamReader sr = new StreamReader("input.txt");
-            StreamWriter sw = new StreamWriter("output.txt");
-            string[] arr = sr.ReadLine().Split(' ');
+            StreamReader sr = new StreamReader("input.txt"); //File to read data
+            StreamWriter sw = new StreamWriter("output.txt"); //File to save the outputs 
+            string[] arr = sr.ReadLine().Split(' '); //Creating string array 
             for (int i = 0; i < arr.Length; i++)
             {
                 int x = int.Parse(arr[i]);
                 if (isPrime(x) == true)
                 {         
-                    sw.Write(x + " ");
+                    sw.Write(x + " "); //Saving only prime numbers in streamwriter file
                 }
             }
-            sr.Close();
-            sw.Close();
+            sr.Close(); //Closing the streamreader
+            sw.Close(); //Closing the streamwriter
             
         }
     }
