@@ -19,7 +19,7 @@ namespace task3
             }
         }
 
-        static void Ex4(DirectoryInfo directory, int level)
+        static void Tree(DirectoryInfo directory, int level)
         {
             
             FileInfo[] files = directory.GetFiles();
@@ -35,13 +35,14 @@ namespace task3
             {
                 PrintSpaces(level);
                 Console.WriteLine(d.Name);
-                Ex4(d, level + 1);
+                Tree(d, level + 1);
             }
         }
             static void Main(string[] args)
         {
-            DirectoryInfo d = new DirectoryInfo(@"C:\Users\Lenovo\Desktop\string path");
-            Ex4(d,0);
+            string path = @"C:\Users\Lenovo\Desktop\ExDir";
+            DirectoryInfo d = new DirectoryInfo(path);
+            Tree(d,0);
             Console.ReadKey();
         }
        
