@@ -1,0 +1,7 @@
+C:\Users\Lenovo\Desktop\PP2\week 1\task2v2\task2v2\bin\Debug\task2v2.exe.config
+C:\Users\Lenovo\Desktop\PP2\week 1\task2v2\task2v2\bin\Debug\task2v2.exe
+C:\Users\Lenovo\Desktop\PP2\week 1\task2v2\task2v2\bin\Debug\task2v2.pdb
+C:\Users\Lenovo\Desktop\PP2\week 1\task2v2\task2v2\obj\Debug\task2v2.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\PP2\week 1\task2v2\task2v2\obj\Debug\task2v2.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\PP2\week 1\task2v2\task2v2\obj\Debug\task2v2.exe
+C:\Users\Lenovo\Desktop\PP2\week 1\task2v2\task2v2\obj\Debug\task2v2.pdb
