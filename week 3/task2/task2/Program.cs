@@ -11,8 +11,9 @@ namespace task1
     {
         public int cursor;
         public int sz;
+        private string e;
         bool ok;
-        bool insert = false;
+        public bool insert = false;
 
         public FarManager()
         {
@@ -53,7 +54,7 @@ namespace task1
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
             }
         }
-
+        
         public void Show(string path)
         {
             DirectoryInfo directory = new DirectoryInfo(path);
@@ -64,7 +65,7 @@ namespace task1
             int num = 1;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(path);
-            if ( insert == true ) { Console.Write("Введите название: "); } 
+           
             foreach (FileSystemInfo fs in fileSystemInfos)
             {
                 if (ok && fs.Name.StartsWith("."))
@@ -81,7 +82,13 @@ namespace task1
                 
                 index++;
             }
-            
+            if (insert == true)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(); Console.Write("Vvdeite nazvanie: ");
+                string znak = @"\"  ;  e = znak + Console.ReadLine();
+            }
+
 
         }
        
@@ -147,6 +154,7 @@ namespace task1
                     ok = true;
                 if (consoleKey.Key == ConsoleKey.Enter)
                 {
+                    insert = false;
                     int k = 0;
                     for (int i = 0; i < directory.GetFileSystemInfos().Length; i++)
                     {
@@ -198,17 +206,24 @@ namespace task1
                             }
                     if (fs.GetType() == typeof(DirectoryInfo))
                     {
-
-                      
-                        string newPath = directory.Parent + Console.ReadLine();
+                        
+                        fs = directory.Parent;
+                        path = fs.FullName;
+                        string newPath = path + e;   
                         if (directory.Exists && Directory.Exists(newPath) == false)
                         {
                             directory.MoveTo(newPath);
                         }
-                    }
+                    } /*else
+                        {
+                        
+                        path = fs.FullName;
+                        string newFile = path + e;
+                        File.Move(fs.FullName, newFile);
+                        } */
 
 
-                }
+                     }
 
                 
             }
