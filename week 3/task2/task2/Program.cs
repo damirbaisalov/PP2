@@ -34,7 +34,7 @@ namespace task1
             if (cursor == sz)
                 cursor = 0;
         }
-       
+
 
         public void Color(FileSystemInfo fs, int index)
         {
@@ -54,7 +54,7 @@ namespace task1
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
             }
         }
-        
+
         public void Show(string path)
         {
             DirectoryInfo directory = new DirectoryInfo(path);
@@ -65,7 +65,7 @@ namespace task1
             int num = 1;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(path);
-           
+
             foreach (FileSystemInfo fs in fileSystemInfos)
             {
                 if (ok && fs.Name.StartsWith("."))
@@ -79,19 +79,19 @@ namespace task1
                 num++;
 
                 Console.WriteLine(fs.Name);
-                
+
                 index++;
             }
             if (insert == true)
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine(); Console.Write("Vvdeite nazvanie: ");
-                string znak = @"\"  ;  e = znak + Console.ReadLine();
+                string znak = @"\"; e = znak + Console.ReadLine();
             }
 
 
         }
-       
+
         public void Start(string path)
         {
             DirectoryInfo directory = new DirectoryInfo(path);
@@ -104,8 +104,8 @@ namespace task1
                 Show(path);
                 consoleKey = Console.ReadKey();
 
-                 if (consoleKey.Key == ConsoleKey.Delete)
-                 {
+                if (consoleKey.Key == ConsoleKey.Delete)
+                {
                     int k = 0;
                     for (int i = 0; i < directory.GetFileSystemInfos().Length; i++)
                     {
@@ -133,9 +133,9 @@ namespace task1
                             Console.WriteLine(ex.Message);
                         }
                     }
-                    else                       
-                        File.Delete(fs.FullName);                   
-                } 
+                    else
+                        File.Delete(fs.FullName);
+                }
 
                 if (consoleKey.Key == ConsoleKey.Backspace)
                 {
@@ -177,39 +177,39 @@ namespace task1
 
                     else
                     {
-                       
+
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine();
                         string[] s = File.ReadAllLines(fs.FullName); //в файле несколько строк, одна строка - один элемент массива
                         Console.WriteLine(string.Join("\n", s));
                         Console.ReadLine();
-                        
+
                     }
                 }
-               
+
 
                 if (consoleKey.Key == ConsoleKey.Insert)
-                    {
+                {
                     insert = true;
-                            int g = 0;
-                            for (int i = 0; i < directory.GetFileSystemInfos().Length; i++)
-                            {
-                                if (ok && directory.GetFileSystemInfos()[i].Name.StartsWith("."))
-                                    continue;
-                                if (cursor == g)
-                                {
-                                    fs = directory.GetFileSystemInfos()[i];
-                                    break;
-                                }
-                                g++;
+                    int g = 0;
+                    for (int i = 0; i < directory.GetFileSystemInfos().Length; i++)
+                    {
+                        if (ok && directory.GetFileSystemInfos()[i].Name.StartsWith("."))
+                            continue;
+                        if (cursor == g)
+                        {
+                            fs = directory.GetFileSystemInfos()[i];
+                            break;
+                        }
+                        g++;
 
-                            }
+                    }
                     if (fs.GetType() == typeof(DirectoryInfo))
                     {
-                        
-                        fs = directory.Parent;
-                        path = fs.FullName;
-                        string newPath = path + e;   
+
+                        directory = new DirectoryInfo(path);
+                        string source = directory.Parent.FullName;
+                        string newPath = source + e;
                         if (directory.Exists && Directory.Exists(newPath) == false)
                         {
                             directory.MoveTo(newPath);
@@ -223,9 +223,9 @@ namespace task1
                         } */
 
 
-                     }
+                }
 
-                
+
             }
         }
 
